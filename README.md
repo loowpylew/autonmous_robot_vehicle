@@ -1,5 +1,13 @@
 # autonmous_robot_vehicle
 
+FYI, this program requires a raspberry pi along with the car frame and relavant components to operate. These components include cameras, IR sensors and motors along with the battery pack to supply power once disconnected from the ethernet cable used to supply power. 
+
+- In order to upload your code to the robot, you will have to ssh to the network drive of the robot i.e. ssh esd204@10.0.1.2:(specify directory if one has already been made) 
+
+- You will also have to create a makefile(executable)
+
+- You can then run the file using the command 'make -n run' as long as you are within the same directory as the makefile. 
+
 The intended behaviour of the robot car is as follows: 
 1.	If a red circle (blob) is detected, calculate distance from the robot and the blob. 
 2.	If there is no red circle detected within the local vicinity of the cameras (defined by macros specified at the start of the code), then turn right in order for the cameras to detect a change in its surroundings i.e., the red blob is placed in front of the robot car. 
